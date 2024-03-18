@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/4da6fa3327.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="container">
+        <table>
+            <h1>Manage Employees</h1>
+            <tr>
+                <th>ID</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>E-mail</th>
+                <th>Phone</th>
+                <th>Location</th>
+                <th>Birthday</th>
+                <th><button id="modalButton" onclick="openModal()">+ New Employee</button></th>
+            </tr>
+            
+        </table>
+    </div>
+
+
+
+    <div id="modal" class="modal">
+        <div class="modal__content">
+            <div id="list">
+            </div>
+
+            <button class="modal__content--button" onclick="closeModal()">x</button>
+            <button type="submit" class="addButton" onclick="addEmployee()">Add New Employee</button>
+        </div>
+    </div>
+
+    <div id="modal2" class="modal">
+        <div class="modal__content">
+            <div id="list2">
+            </div>
+
+            <button class="modal__content--button" onclick="closeModal2()">x</button>
+            <button type="submit" class="addButton" onclick="saveChanges()">Save Changes</button>
+        </div>
+    </div>
+
+
+    <script src="index.js"></script>
+</body>
+
+</html>
