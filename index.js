@@ -91,6 +91,8 @@ addEmployee = () => {
 
     table.appendChild(newRow);
 
+    updateRowIds();
+
     closeModal();
 }
 
@@ -103,8 +105,16 @@ deleteRow = () => {
     for (let i = 1; i < table.rows.length; i++) {
         table.rows[i].cells[7].onclick = function () {
             table.deleteRow(this.parentElement.rowIndex);
+
+            updateRowIds();
         }
-
     }
+}
 
+updateRowIds = () => {
+    const table = document.querySelector('table');
+    for (let i = 1; i < table.rows.length; i++) {
+        table.rows[i].cells[0].textContent = i - 1;
+        table.rows[i].cells[7].querySelector('button').id = `${i}rowsDelete`;
+    }
 }
