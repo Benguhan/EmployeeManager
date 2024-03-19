@@ -49,7 +49,6 @@ openModal = () => {
     list.innerHTML = temp;
 }
 
-
 closeModal = () => {
     modal.style.display = "none";
 }
@@ -97,7 +96,7 @@ addEmployee = () => {
 }
 
 saveChanges = () => {
-    
+
 }
 
 deleteRow = () => {
